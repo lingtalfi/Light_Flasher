@@ -49,7 +49,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [LightFlasher::hasFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/Service/LightFlasher.php#L92-L96)
+See the source code for method [LightFlasher::hasFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/Service/LightFlasher.php#L115-L119)
 
 
 See Also

@@ -59,6 +59,10 @@ flasher:
 History Log
 =============
 
+- 1.1.0 -- 2019-08-07
+
+    - LightFlasher now uses flash notifications instead of messages
+    
 - 1.0.1 -- 2019-08-07
 
     - update doc

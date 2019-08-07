@@ -46,7 +46,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightFlasher::startPhpSession](https://github.com/lingtalfi/Light_Flasher/blob/master/Service/LightFlasher.php#L130-L138)
+See the source code for method [LightFlasher::startPhpSession](https://github.com/lingtalfi/Light_Flasher/blob/master/Service/LightFlasher.php#L153-L161)
 
 
 See Also

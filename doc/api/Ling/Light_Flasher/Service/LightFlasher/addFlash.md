@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [LightFlasher::addFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/addFlash.md)(string $id, string $message) : void
+public [LightFlasher::addFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/addFlash.md)(string $id, string $message, string $wiseType = s) : void
 
 
 
@@ -38,6 +38,11 @@ Parameters
 
     The flash message.
 
+- wiseType
+
+    Either w, i, s or e.
+See the class description for more details.
+
 
 Return values
 ================
@@ -53,7 +58,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightFlasher::addFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/Service/LightFlasher.php#L79-L83)
+See the source code for method [LightFlasher::addFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/Service/LightFlasher.php#L102-L106)
 
 
 See Also

@@ -35,6 +35,25 @@ namespace Ling\Light_Flasher\Service;
  *
  *
  *
+ * A message is an array
+ * -----------------
+ * An important concept with flash is that a flash is a notification, and so it's an array composed of two elements:
+ *
+ * - type
+ * - message
+ *
+ * For the type, in this class we use the "wise" notation.
+ * With:
+ *
+ * - w: warning
+ * - i: info
+ * - s: success
+ * - e: error
+ *
+ * Note: you can use the @page(WiseTool) to translate the wise notation to another.
+ *
+ *
+ *
  *
  *
  */
@@ -48,7 +67,7 @@ class LightFlasher
 
     /**
      * This property holds the flashes for this instance.
-     * It's an array of id => flash message.
+     * It's an array of id => flash notification.
      *
      *
      * @var array
@@ -75,11 +94,15 @@ class LightFlasher
      *
      * @param string $message
      * The flash message.
+     *
+     * @param string $wiseType
+     * Either w, i, s or e.
+     * See the class description for more details.
      */
-    public function addFlash(string $id, string $message)
+    public function addFlash(string $id, string $message, string $wiseType = 's')
     {
         $this->startPhpSession();
-        $_SESSION[$this->sessionName][$id] = $message;
+        $_SESSION[$this->sessionName][$id] = [$message, $wiseType];
     }
 
 
@@ -97,11 +120,11 @@ class LightFlasher
 
 
     /**
-     * Returns the flash associated with the given $id, or false if no flash was bound to that $id.
+     * Returns the flash (notification) associated with the given $id, or false if no flash was bound to that $id.
      * If the flash exists, it will also be removed from the session.
      *
      * @param string $id
-     * @return string|false
+     * @return array|false
      */
     public function getFlash(string $id)
     {

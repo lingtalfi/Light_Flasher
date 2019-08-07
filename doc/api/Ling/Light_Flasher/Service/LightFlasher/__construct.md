@@ -46,7 +46,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightFlasher::__construct](https://github.com/lingtalfi/Light_Flasher/blob/master/Service/LightFlasher.php#L62-L66)
+See the source code for method [LightFlasher::__construct](https://github.com/lingtalfi/Light_Flasher/blob/master/Service/LightFlasher.php#L81-L85)
 
 
 See Also

@@ -44,6 +44,25 @@ That's all.
 
 
 
+A message is an array
+-----------------
+An important concept with flash is that a flash is a notification, and so it's an array composed of two elements:
+
+- type
+- message
+
+For the type, in this class we use the "wise" notation.
+With:
+
+- w: warning
+- i: info
+- s: success
+- e: error
+
+Note: you can use the [WiseTool](https://github.com/lingtalfi/WiseTool) to translate the wise notation to another.
+
+
+
 Class synopsis
 ==============
 
@@ -56,9 +75,9 @@ class <span class="pl-k">LightFlasher</span>  {
 
 - Methods
     - public [__construct](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/__construct.md)() : void
-    - public [addFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/addFlash.md)(string $id, string $message) : void
+    - public [addFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/addFlash.md)(string $id, string $message, string $wiseType = s) : void
     - public [hasFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/hasFlash.md)(string $id) : bool
-    - public [getFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/getFlash.md)(string $id) : string | false
+    - public [getFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/getFlash.md)(string $id) : array | false
     - private [startPhpSession](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/startPhpSession.md)() : void
 
 }
@@ -78,7 +97,7 @@ Properties
 - <span id="property-flashes"><b>flashes</b></span>
 
     This property holds the flashes for this instance.
-    It's an array of id => flash message.
+    It's an array of id => flash notification.
     
     
 
@@ -90,7 +109,7 @@ Methods
 - [LightFlasher::__construct](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/__construct.md) &ndash; Builds the LightFlasher instance.
 - [LightFlasher::addFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/addFlash.md) &ndash; Adds a flash to the flasher.
 - [LightFlasher::hasFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/hasFlash.md) &ndash; Returns whether the given $id is bound to a flash at the moment.
-- [LightFlasher::getFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/getFlash.md) &ndash; Returns the flash associated with the given $id, or false if no flash was bound to that $id.
+- [LightFlasher::getFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/getFlash.md) &ndash; Returns the flash (notification) associated with the given $id, or false if no flash was bound to that $id.
 - [LightFlasher::startPhpSession](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/startPhpSession.md) &ndash; Starts the php session if it's not already started.
 
 
