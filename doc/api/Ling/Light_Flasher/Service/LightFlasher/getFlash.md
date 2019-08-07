@@ -22,6 +22,7 @@ public [LightFlasher::getFlash](https://github.com/lingtalfi/Light_Flasher/blob/
 
 
 Returns the flash associated with the given $id, or false if no flash was bound to that $id.
+If the flash exists, it will also be removed from the session.
 
 
 
@@ -49,7 +50,7 @@ Returns string | false.
 
 Source Code
 ===========
-See the source code for method [LightFlasher::getFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/Service/LightFlasher.php#L105-L114)
+See the source code for method [LightFlasher::getFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/Service/LightFlasher.php#L106-L115)
 
 
 See Also

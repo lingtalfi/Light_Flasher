@@ -59,6 +59,10 @@ flasher:
 History Log
 =============
 
+- 1.0.1 -- 2019-08-07
+
+    - update doc
+    
 - 1.0.0 -- 2019-08-07
 
     - initial commit

@@ -98,6 +98,7 @@ class LightFlasher
 
     /**
      * Returns the flash associated with the given $id, or false if no flash was bound to that $id.
+     * If the flash exists, it will also be removed from the session.
      *
      * @param string $id
      * @return string|false
