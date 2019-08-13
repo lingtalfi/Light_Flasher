@@ -4,7 +4,7 @@
 
 The LightFlasher class
 ================
-2019-08-07 --> 2019-08-07
+2019-08-07 --> 2019-08-13
 
 
 
@@ -77,7 +77,7 @@ class <span class="pl-k">LightFlasher</span>  {
     - public [__construct](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/__construct.md)() : void
     - public [addFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/addFlash.md)(string $id, string $message, string $wiseType = s) : void
     - public [hasFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/hasFlash.md)(string $id) : bool
-    - public [getFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/getFlash.md)(string $id) : array | false
+    - public [getFlash](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/getFlash.md)(string $id, bool $removeFlash = true) : array | false
     - private [startPhpSession](https://github.com/lingtalfi/Light_Flasher/blob/master/doc/api/Ling/Light_Flasher/Service/LightFlasher/startPhpSession.md)() : void
 
 }

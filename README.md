@@ -59,6 +59,10 @@ flasher:
 History Log
 =============
 
+- 1.2.0 -- 2019-08-13
+
+    - update LightFlasher->getFlash, now have the option to NOT remove the flash after use
+    
 - 1.1.0 -- 2019-08-07
 
     - LightFlasher now uses flash notifications instead of messages

@@ -121,17 +121,33 @@ class LightFlasher
 
     /**
      * Returns the flash (notification) associated with the given $id, or false if no flash was bound to that $id.
-     * If the flash exists, it will also be removed from the session.
+     *
+     * If the flash exists, it will also be removed from the session, unless the $removeFlash flag is set to false.
+     *
+     *
+     *
+     * A concrete use case of when the removeFlash flag needs to be false (developer anecdote)
+     * ---------------
+     * I was creating this admin backend, and the user didn't have the right to access a page, so I created a flash
+     * telling her which specific right she was missing, and then redirected her to that forbidden page.
+     * From there, the flash was available, and so I could tell her exactly which right she was missing.
+     * However, I didn't want that if she refreshed the page, the message would be lost, so I used a persistent flash
+     * message in this case.
+     *
+     *
      *
      * @param string $id
      * @return array|false
      */
-    public function getFlash(string $id)
+    public function getFlash(string $id, bool $removeFlash = true)
     {
         $this->startPhpSession();
         if (array_key_exists($id, $_SESSION[$this->sessionName])) {
             $ret = $_SESSION[$this->sessionName][$id];
-            unset($_SESSION[$this->sessionName][$id]);
+
+            if (true === $removeFlash) {
+                unset($_SESSION[$this->sessionName][$id]);
+            }
             return $ret;
         }
         return false;
