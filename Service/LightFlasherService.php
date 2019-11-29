@@ -57,7 +57,7 @@ namespace Ling\Light_Flasher\Service;
  *
  *
  */
-class LightFlasher
+class LightFlasherService
 {
     /**
      * This property holds the sessionName for this instance.
@@ -137,6 +137,7 @@ class LightFlasher
      *
      *
      * @param string $id
+     * @param bool $removeFlash = true
      * @return array|false
      */
     public function getFlash(string $id, bool $removeFlash = true)

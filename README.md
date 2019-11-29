@@ -9,8 +9,6 @@ An simple utility for storing temporary messages in the session.
 This is a [Light framework plugin](https://github.com/lingtalfi/Light/blob/master/doc/pages/plugin.md).
 
 
-
-
 This is part of the [universe framework](https://github.com/karayabin/universe-snapshot).
 
 
@@ -48,7 +46,8 @@ Here is an example of the service configuration file:
 
 ```yaml
 flasher:
-    instance: Ling\Light_Flasher\Service\LightFlasher
+    instance: Ling\Light_Flasher\Service\LightFlasherService
+
 
 ```
 
@@ -59,6 +58,10 @@ flasher:
 History Log
 =============
 
+- 1.3.0 -- 2019-11-29
+
+    - renamed LightFlasher to LightFlasherService
+    
 - 1.2.0 -- 2019-08-13
 
     - update LightFlasher->getFlash, now have the option to NOT remove the flash after use
