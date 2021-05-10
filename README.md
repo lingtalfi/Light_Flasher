@@ -63,6 +63,10 @@ flasher:
 History Log
 =============
 
+- 1.3.5 -- 2021-05-10
+
+    - Fix assets missing.
+
 - 1.3.4 -- 2021-03-15
 
     - update planet to adapt Ling.Light:0.70.0
